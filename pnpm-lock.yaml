@@ -6892,6 +6892,7 @@ snapshots:
       - '@types/node'
       - less
       - lightningcss
+      - msw
       - sass
       - sass-embedded
       - stylus
