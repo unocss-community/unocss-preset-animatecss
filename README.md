@@ -1,6 +1,10 @@
 # unocss-preset-animatecss [![npm](https://img.shields.io/npm/v/unocss-preset-animatecss)](https://npmjs.com/package/unocss-preset-animatecss)
 
 
+>🚧 This is an **experimental project** aimed at exploring the process of converting a **static CSS file** into a dynamic **[UnoCSS](https://github.com/unocss/unocss)** preset.
+
+
+
 ## Features
 - 🔥 Animate.css Preset for UnoCSS
 
