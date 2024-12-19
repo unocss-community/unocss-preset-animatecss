@@ -86,6 +86,11 @@
     "vitest": "^0.34.6"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx eslint --fix --cache"
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npx eslint --fix --cache"
+    ]
   }
 }
