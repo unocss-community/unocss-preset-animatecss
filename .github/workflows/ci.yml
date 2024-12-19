@@ -22,8 +22,6 @@ jobs:
         with:
           node-version: 18.x
           cache: pnpm
-      - run: corepack enable
-
       - name: Setup
         run: npm i -g @antfu/ni
 
