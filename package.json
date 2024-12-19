@@ -2,7 +2,7 @@
   "name": "unocss-preset-animatecss",
   "type": "module",
   "version": "0.0.2",
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@9.15.0",
   "description": "UnoCSS preset for animate.css",
   "author": "chizukicn <chizukicn@outlook.com>",
   "license": "MIT",
@@ -65,25 +65,26 @@
     "postcss-js": "^4.0.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.41.4",
+    "@antfu/eslint-config": "^3.12.0",
     "@babel/types": "^7.26.3",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.17.10",
     "@types/postcss-js": "^4.0.4",
-    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
     "animate.css": "^4.1.1",
     "bumpp": "^9.9.1",
     "dedent": "^1.5.3",
-    "eslint": "^8.57.1",
+    "eslint": "^9.17.0",
     "fs-extra": "^11.2.0",
     "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
     "simple-git-hooks": "^2.11.1",
     "taze": "^0.18.0",
-    "typescript": "5.1.6",
-    "unbuild": "^2.0.0",
+    "typescript": "5.7.2",
+    "unbuild": "^3.0.1",
     "unocss": "latest",
-    "vite": "^4.5.5",
-    "vitest": "^0.34.6"
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

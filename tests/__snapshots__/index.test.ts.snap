@@ -16,7 +16,7 @@ exports[`preset-animatecss 1`] = `
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-  .animate__animated[class*=\\"Out\\"] {
+  .animate__animated[class*="Out"] {
     opacity: 0;
   }
 }
