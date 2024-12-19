@@ -1,12 +1,12 @@
-import { createGenerator } from 'unocss'
-import { expect, test } from 'vitest'
-import prettier from 'prettier'
 import dedent from 'dedent'
+import prettier from 'prettier'
+import { createGenerator } from 'unocss'
+import { expect, it } from 'vitest'
 import { presetAnimateCSS } from '../src'
 
 const prettyCSS = (css: string) => prettier.format(dedent(css), { parser: 'css' })
 
-test('preset-animatecss', async () => {
+it('preset-animatecss', async () => {
   const uno = createGenerator({
     presets: [presetAnimateCSS()],
   })

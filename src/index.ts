@@ -1,7 +1,7 @@
 import type { CSSObject, Preset, Rule } from 'unocss'
-import { definePreset } from 'unocss'
 import postcss from 'postcss'
 import { objectify, parse } from 'postcss-js'
+import { definePreset } from 'unocss'
 import animatecss from './animatecss'
 
 function toCSS(obj: any) {
@@ -65,25 +65,23 @@ export function presetAnimateCSS(): Preset {
           const keyframe = keyframes.find(([k]) => k === animateName)
           if (keyframe) {
             const keyframeCSS = `@keyframes ${animateName} {\n${toCSS(keyframe[1])}}`
-            return [new RegExp(`^${className}`),
-              () => {
-                return [{
-                  'animation-name': animateName,
-                }, keyframeCSS]
-              },
-            ]
+            return [new RegExp(`^${className}`), () => {
+              return [{
+                'animation-name': animateName,
+              }, keyframeCSS]
+            }]
           }
         }
         return [className, `${name}{
           ${toCSS(body)}
         }`]
       }) as Rule[],
-      [/^animate__delay-([\w\.]+)/, ([_, delay]) => {
+      [/^animate__delay-([\w.]+)/, ([_, delay]) => {
         return {
           'animation-delay': delay,
         }
       }],
-      [/^animate__duration-([\w\.]+)/, ([_, duration]) => {
+      [/^animate__duration-([\w.]+)/, ([_, duration]) => {
         return {
           'animation-duration': duration,
         }
