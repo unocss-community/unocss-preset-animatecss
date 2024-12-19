@@ -15,24 +15,24 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set pnpm
+        uses: pnpm/action-setup@v4
       - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2.4.0
-        with:
-          version: 8.7.4
+          cache: pnpm
+      - name: Setup
+        run: npm i -g @antfu/ni
 
       - name: Install
-        run: pnpm i
+        run: nci
 
       - name: Lint
-        run: pnpm lint
+        run: nr lint
 
       - name: Build
-        run: pnpm build
+        run: nr build
 
       - name: Test
-        run: pnpm test
+        run: nr test
