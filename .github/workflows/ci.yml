@@ -15,11 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set pnpm
+        uses: pnpm/action-setup@v4
       - name: Set node
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
-
+          cache: pnpm
       - name: Setup
         run: npm i -g @antfu/ni
 
